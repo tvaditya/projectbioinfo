@@ -1,7 +1,11 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { Red_Hat_Display } from "next/font/google";
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -9,9 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`antialiased`}>{children}
+        className={`${redHatDisplay.className} bg-background-primary text-content-body antialiased`}>
+      {children}
       </body>
     </html>
   );
