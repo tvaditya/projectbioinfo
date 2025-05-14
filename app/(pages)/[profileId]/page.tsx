@@ -18,6 +18,7 @@ export default async function ProfilePage({
                     Faça o upgrade agora!
                 </button>
             </div>
+            <div>ID:</div>
             <div className="w-1/2 flex justify-center h-min">
                 <UserCard />
             </div>
